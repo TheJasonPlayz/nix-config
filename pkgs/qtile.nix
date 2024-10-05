@@ -1,7 +1,7 @@
-{user, nixpkgs}:
+{nixpkgs}:
 
 let 
 in
-nixpkgs.writeText ${user.home}/qtile/config.py ''
+nixpkgs.writeText /home/jasonw/qtile/config.py ''
   
 ''

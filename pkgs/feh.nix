@@ -1,8 +1,8 @@
-{ user, feh, symlinkJoin, writeText makeWrapper }:
+{ feh, symlinkJoin, writeText makeWrapper }:
 
 symlinkJoin { 
   name = "feh-custom";
   paths = [ feh ];
   buildInputs = [ makeWrapper ];
-  postBuild = writeText "${user.home}/.fehbg" ''feh --bg-scale --no-fehbg --no-xinerama ${user.home}/Pictures/BGs/''
+  postBuild = writeText "/home/jasonw/.fehbg" ''feh --bg-scale --no-fehbg --no-xinerama /home/jasonw/Pictures/BGs/''
 }
